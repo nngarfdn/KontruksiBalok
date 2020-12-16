@@ -18,10 +18,10 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textAlignment="center"
+        android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:textColor="@android:color/white"
-        android:text="Aplikasi Hitung
-KBS(Konstruksi Balok Sederhana)"/>
+        android:text="Aplikasi Hitung \nKBS(Konstruksi Balok Sederhana)"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,6 +30,13 @@ KBS(Konstruksi Balok Sederhana)"/>
         android:orientation="vertical"
         android:background="@drawable/bg"
         >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gambar"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="16dp"
@@ -48,7 +55,6 @@ KBS(Konstruksi Balok Sederhana)"/>
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -141,6 +147,18 @@ KBS(Konstruksi Balok Sederhana)"/>
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/txtRa2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="ΣMb = 0"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/txtRb"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
                     android:id="@+id/txtRa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -151,73 +169,129 @@ KBS(Konstruksi Balok Sederhana)"/>
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtRa1" />
 
+                <TextView
+                    android:id="@+id/txtRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="16dp"
+                    android:text="Rb = 0"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtRa"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="120dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/sfd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="SFD( Shear Force Diagram )"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtRb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rb = 0"
-            android:textSize="20sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txtDa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Da = 0"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/sfd"
+                    app:layout_constraintTop_toBottomOf="@+id/sfd" />
 
-        <TextView
-            android:id="@+id/txtDa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Da = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txtDb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Db = 0"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtDa"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDa" />
 
-        <TextView
-            android:id="@+id/txtDb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Db = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txtDc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Dc = 0"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/txtDb"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDb" />
 
-        <TextView
-            android:id="@+id/txtDc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dc = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/txtMa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ma = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtMB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mb = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/bmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="BMD ( Bending Moment Diagram )"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtMc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mc = 0"
-            android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txtMa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ma = 0"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/bmd"
+                    app:layout_constraintTop_toBottomOf="@+id/bmd" />
+
+                <TextView
+                    android:id="@+id/txtMB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mb = 0"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/txtMa"
+                    app:layout_constraintTop_toBottomOf="@+id/txtMa" />
+
+                <TextView
+                    android:id="@+id/txtMc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mc = 0"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/txtMB"
+                    app:layout_constraintTop_toBottomOf="@+id/txtMB" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
 
